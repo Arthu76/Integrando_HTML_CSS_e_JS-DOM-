@@ -1,0 +1,1 @@
+Document Object Model (DOM) representa a estrutura do documento HTML e o relacionamento entre os elementos (as tags)

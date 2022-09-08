@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+</body>
+    <script>
+        const body = document.querySelector('body')
+
+        // criando uma div via JS
+        const div1 = document.createElement('div')
+        div1.classList.add('destaque')
+        // criando conteudo da div
+        div1.innerHTML = 'Primeiro'
+
+        const div2 = document.createElement('div')
+        div2.setAttribute('wm-atributo', 'valor')
+        div2.innerHTML = 'segundo'
+
+        // criando um parágrafo
+        const p = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+
+        const div3 = document.createElement('div')
+        // appendChild coloca o como ultimo elemento oque for pedido
+        div3.appendChild(p)
+
+        //adicionando as divs na pagina
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+        //com insertBefore poderá ser adicionado o conteudo que você quer, na índice que você quiser
+        const texto = document.createTextNode('Antes...')
+        div3.insertBefore(texto, div3.childNodes[0])
+
+        // clonando elementos
+        // caso o cloneNode for true ele também copiará os filhos do elemento
+        const div4 = div3.cloneNode(true)
+        body.appendChild(div4)
+        //para remover
+        body.removeChild(div2)
+
+        
+
+    </script>
+
+
+</html>

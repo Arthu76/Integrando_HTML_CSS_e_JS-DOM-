@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <!-- onclick="navEm5s(event)" -->
+        <a href="https://google.com.br">Google</a>
+    </div>
+    <script>
+
+        //Padrão Observer: esse padrão é invocado para fazer um tratamento em cima de um evento que aconteceu ( operação Assincrona )
+
+        function navEm5s(e) {
+            //previnindo que o comportamento padrão ocorra
+            e.preventDefault()
+            console.log('Saindo em 5s...')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+        // se chamar a função onclick direto na tag, o parametro deverá ser 'event'
+        // chamando uma função direto na tag ajuda a visualizar oque a tag em especifica está fazendo
+
+        // Outra forma de chamar a função
+        const a = document.querySelector('a')
+        a.onclick = navEm5s
+
+    </script>
+</body>

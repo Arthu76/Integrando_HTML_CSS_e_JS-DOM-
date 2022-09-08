@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #03</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Formulário</h1>
+    <form name="pesquisa" action="http://www.google.com.br/search">
+        <!-- LEMBRETE - o nome 'q' é usado para a ação de pesquisar -->
+        <input type="text" name="q" placeholder="Digite o termo...">
+        <select name="hl">
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="en-us">Inglês (Americano)</option>
+        </select>
+        <button>Pesquisar</button>
+    </form>
+    <script>
+        // Acessando os Formulários
+        console.log(document.forms)
+        console.log(document.forms[0])
+        // Pegando FOrmulário por nome
+        // Dependendo doque pedir poderá vir uma NodeList ou um HTMLCollection
+        console.log(document.getElementsByName('pesquisa'))
+        console.log(document.getElementsByTagName('form'))
+        //modo mais rápido para pegar uma tag pelo nome
+        console.log(document.pesquisa)
+        console.log(document.pesquisa.q)
+
+        //mudando um atributo
+        document.pesquisa.q.value = 'Linux Brasil'
+    </script>
+</body>
+
+</html>

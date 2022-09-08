@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <a href='https://www.cod3r.com.br'>Cod3r</a>
+    </div>
+    <div id='primeiro'>
+        <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
+    </div>
+
+
+    <script>
+        const img = document.querySelector('img')
+
+        // pegando os atributos do elemento img 
+
+        //a partir de uma string
+        console.log('getAttribute', img.getAttribute('src'))
+
+        // pegando o src do elemento diretamente
+        console.log('src', img.src)
+
+        // também suporta colchetes
+        console.log('["src"]', img['src'])
+
+        
+        
+        // Trabalhando com o elemento img
+        console.log('Elemento "img"............')
+
+        // pegando o nodeType (tipo do elemento)
+        console.log('NodeType', img.nodeType)
+        // elemento 1 significa elemento
+
+        // pegando o nome
+        console.log('NodeName', img.nodeName)
+
+        // pegando um nó do que representa o atributo, pegando todas as propriedades em cima deste atributo
+        const src = img.getAttributeNode('src')
+        console.log('Atributo "src"............')
+        console.log('NodeType', src.nodeType)
+        // elemento 2 significa atributo
+        console.log('NodeName', src.nodeName)
+        console.log('NodeValue', src.nodeValue)
+
+
+
+        // Trabalhando com link
+        const link = document.querySelector('a')
+        console.log('Elemento "a"............')
+
+        console.log('href', link.href)
+        console.log('firstChild.nodeType', link.firstChild.nodeType)
+        // elemento 2 significa texto
+
+        // mudando o valor
+        link.firstChild.nodeValue = 'Novo Texto'
+
+        
+        
+
+
+        
+    </script>
+</body>
+
+</html>

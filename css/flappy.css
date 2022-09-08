@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  background-color: rgb(0, 166, 255);
+  height: 600px;
+  width: 800px;
+}
+
+p {
+  font-family: 'Pixel';
+  font-size: 80px;
+  float: right;
+  margin-right: 30px;
+  margin-top: 0px;
+}
+
+#bird1 {
+  float: left;
+}
+
+
+#bird2 {
+  height: 60px;
+}
+
+.cano {
+  display: block;
+}
+
+.cano1 {
+  margin-left: -150px;
+  background-color: green;
+  height: 250px;
+  width: 100px;
+  border: solid rgb(0, 47, 13);
+}
+
+.cano2 {
+  margin-top: 340px;
+  background-color: green;
+  height: 260px;
+  width: 100px;
+  border: solid rgb(0, 47, 13);
+}
+
+@font-face {
+  font-family: 'Pixel';
+  src: url('../fonts/Pixel.ttf');
+}
